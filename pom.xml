@@ -24,7 +24,11 @@
 			<artifactId>jsp-api</artifactId>
 			<version>${jsp.api.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -45,10 +49,10 @@
 
 
 	<build>
-	
-		
+
+
 		<resources>
-		
+
 			<resource>
 				<directory>/WebContent</directory>
 			</resource>
@@ -73,7 +77,7 @@
 					<configuration>
 						<webXml>WebContent\WEB-INF\web.xml</webXml>
 						<warSourceDirectory>WebContent</warSourceDirectory>
-						
+
 					</configuration>
 				</plugin>
 			</plugins>
