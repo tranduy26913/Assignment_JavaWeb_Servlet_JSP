@@ -1,9 +1,21 @@
-package controller;
+package model;
 
 import java.io.Serializable;
+import java.util.Iterator;
+import javax.servlet.http.Cookie;
+import org.bson.Document;
+import org.bson.types.ObjectId;
 
-public class User implements Serializable {
+import com.mongodb.BasicDBObject;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
+
+public class User extends Model implements Serializable {
+	private ObjectId _id;
+	private String email;
 	private String firstName;
+	private String lastName;
 	private String heardFrom;
 	private String wantsUpdates;
 	private String contactVia;
@@ -55,8 +67,7 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	private String lastName;
-	private String email;
+	
 
 	public User() {
 		firstName = "";
@@ -64,10 +75,25 @@ public class User implements Serializable {
 		email = "";
 
 	}
-
+	
 	public User(String firstName, String lastName, String email) {
+		this._id=new ObjectId();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+	}
+
+	public User(String firstName, String lastName, String email,String heardFrom, String wantsUpdates,String contactVia) {
+		this._id=new ObjectId();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.heardFrom=heardFrom;
+		this.wantsUpdates=wantsUpdates;
+		this.contactVia=contactVia;
+	}
+	
+	public void Insert() {
+		USER.insertOne(this);
 	}
 }

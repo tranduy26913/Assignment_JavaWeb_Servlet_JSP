@@ -7,8 +7,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.User;
+
 @WebServlet("/survey")
-public class surveyController extends HttpServlet {
+public class SurveyController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request,

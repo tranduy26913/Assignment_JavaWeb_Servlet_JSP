@@ -50,7 +50,7 @@ br {
 .survey {
 	background-color: #fff;
 	padding: 20px;
-	width: 400px;
+	width: 600px;
 	border-radius: 10px;
 	font-size: 1.6rem;
 	z-index: 2 !important;
@@ -64,9 +64,10 @@ br {
 
 	<div class="app">
 		<div class="row"
-			style="width: 100%; min-height: 300px; position: relative !important; justify-content: center; align-content: center;">
+			style="width: 100%; min-height: 400px; position: relative !important; justify-content: center; align-content: center;">
 	<div class="survey-wrap">
-			<h1>Thanks for taking our survey!</h1>
+	<section style="background-color:#fff;border-radius:12px;border:1px solid #aaa;padding:20px">
+			<h1 style="text-align: center;margin-bottom:20px;">Thanks for taking our survey!</h1>
 
 			<p>Here is the information that you entered:</p>
 
@@ -80,6 +81,7 @@ br {
 				<label>Contact Via:</label>
 				<span>${user.contactVia}</span>
 			</c:if>
+		</section>
 		</div>
 		</div>
 	</div>

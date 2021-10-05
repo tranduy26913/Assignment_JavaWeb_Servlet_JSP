@@ -54,7 +54,7 @@ br {
 .survey {
 	background-color: #fff;
 	padding: 20px;
-	width: 400px;
+	width: 600px;
 	border-radius:10px;
 	font-size:1.6rem;
 	z-index: 2 !important;
@@ -70,8 +70,8 @@ br {
 		<div class="row" style="width:100%;min-height: 300px;position: relative !important;justify-content: center;
 align-content: center;">
 			
-			<form class="survey" action="survey" method="post">
-            <h1>Survey</h1>
+			<form class="survey" action="survey" method="post" style="background-color:#fff;border-radius:12px;border:1px solid #aaa;padding:20px;margin:20px 0px;">
+            <h1 style="text-align: center;margin-bottom:20px;">Survey</h1>
             <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
             
             <h2>Your information:</h2>

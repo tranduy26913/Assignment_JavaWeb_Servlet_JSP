@@ -83,7 +83,7 @@
                   <div class="card-body">
                     <a href="${pageContext.request.contextPath}/Dacta" class="card-title">Đặc tả đề tài</a>
                     <p class="card-text">
-                      Thiết kế Prototype (UI) cho ứng dụng Web ở Bài tập 2
+                      Đặc tả về đề tài cuối kì của nhóm
                     </p>
                   </div>
                 </div>
@@ -92,9 +92,10 @@
               <div class="col-sm-2">
                 <div class="card assignment-item" style="width: 18rem;min-height: 180px;">
                   <div class="card-body">
-                    <a href="#" class="card-title">Bài tập 4</a>
+                    <a href="#" class="card-title">Download</a>
                     <p class="card-text">
-                      Hoàn thành giao diện người dùng cho ứng dụng web trong Bài tập 3
+                      Bài tập Download: Áp dụng Cookie, Session <br>
+                      Chapter: 7.1, 7.2, 7.3
                     </p>
                   </div>
                 </div>

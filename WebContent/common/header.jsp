@@ -26,9 +26,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/EmailListForm">Email List</a></li>
-                      <li><a class="dropdown-item" href="${pageContext.request.contextPath}/SurveyForm">Survey</a></li>
+                      <li><a class="dropdown-item" href="${pageContext.request.contextPath}/surveyform">Survey</a></li>
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/Dacta">Đặc tả đề tài</a></li>
-                      <li><a class="dropdown-item" href="#">Bài tập 4</a></li>
+                      <li><a class="dropdown-item" href="${pageContext.request.contextPath}/listdownload">Download</a></li>
                       <li><a class="dropdown-item" href="#">Bài tập 5</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>

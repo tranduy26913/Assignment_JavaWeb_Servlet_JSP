@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/surveyForm")
-public class surveyFormController extends HttpServlet {
+@WebServlet("/surveyform")
+public class SurveyFormController extends HttpServlet {
 
 	/**
 	 * 
