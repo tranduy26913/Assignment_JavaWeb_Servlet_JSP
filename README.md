@@ -1,5 +1,4 @@
-# web-group2
-Xây dựng ứng dụng web Tuyển dụng nhân sự
+#Xây dựng ứng dụng web Tuyển dụng nhân sự
 
 A. Giới thiệu Ngày nay nhu cầu việc làm ngày càng lớn, tuy nhiên việc các đơn vị tuyển dụng việc làm cũng như các bên có nhu cầu việc làm lại gặp không ít khó khăn trong việc tiếp cận với nhau. Nắm bắt được xu hướng trên, ứng dụng Website Tuyển dụng nhân sự với mục tiêu hướng đến sự đơn giản, tiện dụng, dễ cài đặt và thao tác cho người sử dụng. Đồng thời nhấn mạnh tính hiện đại, tinh tế trong việc trải nghiệm người dùng, trên hết là những tính năng cần thiết nhất của công việc quản lý. Giúp bên tìm việc và bên tuyển dụng dễ dàng tiếp cận với nhau giúp giải phóng một lượng lớn lao động cũng như giúp các đơn vị tuyển dụng có được một lực lượng lao động chất lượng B. Các trang web tham khảo:
 +1.Các trang web trong nước:
