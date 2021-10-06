@@ -10,6 +10,12 @@
     padding: 20px 10px;
 }
 
+.assignment-item {
+	width: 100%; 
+	max-width:240px;
+	min-height: 180px !important;
+}
+
 .assignment h2 {
     font-size: 1.8rem;
     margin: auto;

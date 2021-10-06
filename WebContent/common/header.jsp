@@ -45,6 +45,6 @@
           </nav>
         </header>
  
-     <script src="<c:url value='/assets/jquery-3.3.1.min.js' />"></script>
-	<script src="<c:url value='/assets/bootstrap/js/bootstrap.min.js' />"></script>
+     <script src="<c:url value='/assets/jquery-3.3.1.min.js'/>"></script>
+    <script src="<c:url value='/assets/bootstrap/js/bootstrap.min.js'/>"></script>
 
