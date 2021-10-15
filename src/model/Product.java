@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.text.NumberFormat;
 import java.util.Iterator;
 import javax.servlet.http.Cookie;
 import org.bson.Document;
@@ -10,6 +11,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
+
 public class Product extends Model {
 	private ObjectId _id;
 	private String productCode;
@@ -49,4 +51,9 @@ public class Product extends Model {
 		this.productName=pn;
 		this.productPrice=pp;
 	}
+	
+	  public String getPriceCurrencyFormat() {
+	        NumberFormat currency = NumberFormat.getCurrencyInstance();
+	        return currency.format(productPrice);
+	    }
 }

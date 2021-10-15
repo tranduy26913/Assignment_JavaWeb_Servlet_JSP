@@ -5,3 +5,16 @@
     --border-color:#dbdbdb;
     --primary-color:#0a77f3;
 }
+
+td, label, input,span,i,p,th {
+	font-size:14px;
+}
+
+label {
+	min-width: 90px;
+}
+
+input {
+	width: 200px;
+	margin:5px 10px;
+}

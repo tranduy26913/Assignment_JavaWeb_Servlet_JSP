@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png"
 	href="<c:url value='/assets/img/favicon.ico'/>">
-<title>Download Lists</title>
+<title>Download</title>
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link
@@ -29,24 +29,28 @@
 	<div class="app">
 		<section>
 			<div class="content">
-				<h1 style="text-align: center;margin-bottom:20px;">List of albums</h1>
+				<h1 class="text-center">Downloads</h1>
 
-				<c:if test="${cookie.userEmail.value!=null}">
-					<p style="font-size: 1.6rem;">User Email: ${cookie.userEmail.value}</p>
-				</c:if>
-				<p style="font-size:1.6rem;">
-					<a href="download?action=checkUser&amp;productCode=1001"> 86
-						(the band) - True Life Songs and Pictures </a><br> 
-					<a href="download?action=checkUser&amp;productCode=1002">
-						Paddlefoot - The First CD </a><br> 
-					<a href="download?action=checkUser&amp;productCode=1003">
-						Paddlefoot - The Second CD </a><br> 
-					<a href="download?action=checkUser&amp;productCode=1004"> Joe Rut
-						- Genuine Wood Grained Finish </a>
-				</p>
-				</div>
-			</section>
-		
+				<h2><c:out value='${product.productName }'/></h2>
+
+				<table>
+					<tr>
+						<th>Song title</th>
+						<th>Audio Format</th>
+					</tr>
+					<c:forEach var="song" items="${songs}">
+						<tr>
+							<td><c:out value='${song.songName }' /></td>
+							<td><a
+								href="${pageContext.request.contextPath}/Music/<c:out value='${product.productCode}'/>/<c:out value='${song.fileName}'/>.mp3">MP3</a></td>
+						</tr>
+					</c:forEach>
+				</table>
+
+				<p><a href="?action=viewAlbums">View list of albums</a></p>
+				<p><a href="?action=viewCookies">View all cookies</a></p>
+			</div>
+		</section>
 	</div>
 
 
@@ -55,3 +59,4 @@
 
 </body>
 </html>
+

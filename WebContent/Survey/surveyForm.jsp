@@ -1,75 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="icon" type="image/png" href="<c:url value='/assets/img/favicon.ico'/>">
+<link rel="icon" type="image/png"
+	href="<c:url value='/assets/img/favicon.ico'/>">
 <title>Survey</title>
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link
 	href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap&subset=vietnamese"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css"
-	href="<c:url value='/assets/css/main.css' />">
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" type="text/css"
-	href="<c:url value='/assets/bootstrap/css/bootstrap.min.css' />">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/assets/font/fontawesome-free-5.15.3-web/css/all.min.css' />">
-<style>
-label {
-	margin-left: 20px;
-	width:90px;
-	
-}
-
-.title h1 {
-	font-size:2rem;
-	width:100%;
-	text-align:center;
-	margin-bottom:10px;
-}
-
-input [ "text "], input[ "email "] {
-	width: 16rem;
-	margin: 5px 10px;
-	font-size: 1.8rem;
-}
-
-input ["submit"] {
-}
-
-.btn-submit {
-	width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-br {
-	clear: both;
-}
-
-.survey {
-	background-color: #fff;
-	padding: 20px;
-	width: 600px;
-	border-radius:10px;
-	font-size:1.6rem;
-	z-index: 2 !important;
-}
-</style>
+	href="<c:url value='/assets/css/main.css'/>">
 </head>
-<body style="background: #eee; position: relative;">
+<body>
 
 	<jsp:include page="../common/header.jsp"></jsp:include>
 	
 	
 	<div class="app">
-		<div class="row" style="width:100%;min-height: 300px;position: relative !important;justify-content: center;
-align-content: center;">
-			
+		<section>
+			<div class="content">
 			<form class="survey" action="survey" method="post" style="background-color:#fff;border-radius:12px;border:1px solid #aaa;padding:20px;margin:20px 0px;">
             <h1 style="text-align: center;margin-bottom:20px;">Survey</h1>
             <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
@@ -103,6 +60,7 @@ align-content: center;">
 				</div>
         </form>
 		</div>
+		</section>
 	</div>
 
 

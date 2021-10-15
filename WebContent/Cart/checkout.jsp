@@ -18,40 +18,21 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/assets/css/main.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/assets/css/download.css' />">
 </head>
-<body style="background: #eee; position: relative;">
-
+<body>
 	<jsp:include page="../common/header.jsp"></jsp:include>
-
-
 	<div class="app">
 		<section>
-			<div class="content">
-				<h1 style="text-align: center;margin-bottom:20px;">List of albums</h1>
-
-				<c:if test="${cookie.userEmail.value!=null}">
-					<p style="font-size: 1.6rem;">User Email: ${cookie.userEmail.value}</p>
-				</c:if>
-				<p style="font-size:1.6rem;">
-					<a href="download?action=checkUser&amp;productCode=1001"> 86
-						(the band) - True Life Songs and Pictures </a><br> 
-					<a href="download?action=checkUser&amp;productCode=1002">
-						Paddlefoot - The First CD </a><br> 
-					<a href="download?action=checkUser&amp;productCode=1003">
-						Paddlefoot - The Second CD </a><br> 
-					<a href="download?action=checkUser&amp;productCode=1004"> Joe Rut
-						- Genuine Wood Grained Finish </a>
-				</p>
-				</div>
-			</section>
-		
+		<div class="content">
+		<h1>Checkout isn't finished yet</h1>
+		<p>Click on the browser's Back button to continue.</p>
+		<form action="cart" method="post">
+					<input type="hidden" name="action" value="shop"> <input
+						type="submit" value="Continue Shopping">
+		</form>
+		</div>
+		</section>
 	</div>
-
-
 	<jsp:include page="../common/footer.jsp"></jsp:include>
-
-
 </body>
 </html>

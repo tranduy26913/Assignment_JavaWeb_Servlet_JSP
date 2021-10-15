@@ -1,5 +1,4 @@
 @import "base.css";
-
 @import "member.css";
 @import "assignment.css";
 
@@ -13,47 +12,46 @@ html{
     max-width: 100%;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 
 .app {
     width: 1920px; 
     max-width: 100%;
-    padding-bottom: 180px;
     background-color: rgba(255,255,255,0.02);
+    min-height: 400px; 
+}
+
+section {
+	display:flex;
+	justify-content: center; 
+	align-content: center;
+	padding:10px;
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
-
-.img-wrap{
-    width: 100%;
+.text-center {
+	text-align:center;
 }
 
-html {
-   margin:0;
-   padding:0;
-   height:100%;
-   
+.content {
+	background-color:#fff;
+	border-radius:4px;
+	border:1px solid #ccc;
+	padding: 10px;
+	margin: 20px 0px;
+	
 }
-
 body {
     min-height:100%;
     position:relative;
  }
- 
-.slide {
-    height: 400px;
-}
-
-#carouselExampleIndicators{
-    padding-top: 15px;
-}
-.img-style {
-    height: 100%;
-}
 
 
 .navbar {
@@ -92,27 +90,6 @@ body {
     font-size: 1.6rem;
 }
 
-#carouselExampleIndicators {
-    margin: 20px;
-    border-radius: 6px;
-}
-
-.carousel-inner {
-    border-radius: 6px;
-    box-shadow: 0px 4px 10px #888888;
-}
-
-
-
-footer {
-    height: 180px;
-    width: 100%;
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    background-color: #293c4e;
-    align-items: center;
-}
 
 .footer-wrap {
     display: flex;
@@ -123,3 +100,27 @@ footer {
     font-size: 2rem;
     color: #ccc;
 }
+
+
+
+.slide {
+    height: 400px;
+}
+
+#carouselExampleIndicators{
+    padding-top: 15px;
+}
+.img-style {
+    height: 100%;
+}
+
+#carouselExampleIndicators {
+    margin: 20px;
+    border-radius: 6px;
+}
+
+.carousel-inner {
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px #888888;
+}
+

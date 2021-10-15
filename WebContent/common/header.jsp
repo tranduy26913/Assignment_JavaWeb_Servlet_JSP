@@ -29,7 +29,7 @@
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/surveyform">Survey</a></li>
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/Dacta">Đặc tả đề tài</a></li>
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/listdownload">Download</a></li>
-                      <li><a class="dropdown-item" href="#">Bài tập 5</a></li>
+                      <li><a class="dropdown-item" href="${pageContext.request.contextPath}/listitems">Cart</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
@@ -44,7 +44,4 @@
             </div>
           </nav>
         </header>
- 
-     <script src="<c:url value='/assets/jquery-3.3.1.min.js'/>"></script>
-    <script src="<c:url value='/assets/bootstrap/js/bootstrap.min.js'/>"></script>
 

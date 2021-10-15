@@ -1,6 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import util.*;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -11,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 
 import model.Model;
+import model.Music;
 import model.Product;
 import model.User;
 
@@ -86,6 +91,17 @@ String action = request.getParameter("action");
         session.setAttribute("product", product);
         User user = (User) session.getAttribute("user");
 
+        FindIterable<Music> cursor = Model.MUSIC.find(Filters.eq("productCode",productCode));
+		Iterator<Music> it = cursor.iterator();
+		ArrayList<Music> listSongs = new ArrayList<Music>();
+		
+		session.setAttribute("songs", listSongs);
+		if (it.hasNext()) {
+			while (it.hasNext()) {
+				listSongs.add(it.next());
+			}
+		}
+		
         String url;
         // if User object doesn't exist, check email cookie
         if (user == null) {
@@ -102,12 +118,12 @@ String action = request.getParameter("action");
                 ServletContext sc = getServletContext();
                 user= Model.USER.find(Filters.eq("email",emailAddress)).first();
                 session.setAttribute("user", user);
-                url = "/Download/" + productCode + "_download.jsp";
+                url = "/Download/download.jsp";
             }
         } 
         // if User object exists, go to Downloads page
         else {
-            url = "/Download/" + productCode + "_download.jsp";
+            url = "/Download/download.jsp";
         }
         return url;
     }
@@ -137,10 +153,23 @@ String action = request.getParameter("action");
         c.setMaxAge(60 * 60 * 24 * 365 * 3); // set age to 2 years
         c.setPath("/");                      // allow entire app to access it
         response.addCookie(c);
+        
 
         // create and return a URL for the appropriate Download page
         Product product = (Product) session.getAttribute("product");
-        String url = "/Download/" + product.getProductCode() + "_download.jsp";
+        
+        FindIterable<Music> cursor = Model.MUSIC.find(Filters.eq("productCode",product.getProductCode()));
+		Iterator<Music> it = cursor.iterator();
+		ArrayList<Music> listSongs = new ArrayList<Music>();
+		
+		session.setAttribute("songs", listSongs);
+		if (it.hasNext()) {
+			while (it.hasNext()) {
+				listSongs.add(it.next());
+			}
+		}
+		
+        String url = "/Download/download.jsp";
         return url;
    }
 

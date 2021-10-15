@@ -43,6 +43,8 @@ public class Model {
 	public static MongoCollection<User> USER = db.getCollection("USER", User.class);
     @BsonIgnore
     public static MongoCollection<Product> PRODUCT = db.getCollection("PRODUCT", Product.class);
+    @BsonIgnore
+    public static MongoCollection<Music> MUSIC = db.getCollection("MUSIC", Music.class);
 	Logger logger = Logger.getLogger("org.mongodb.driver");
 
 	public Model() {
