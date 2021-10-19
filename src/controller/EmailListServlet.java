@@ -8,6 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.tribes.ChannelSender;
+import org.apache.jasper.tagplugins.jstl.core.If;
+
+import com.mongodb.client.model.Filters;
+
+import model.Model;
 import model.User;
 
 
@@ -48,6 +54,14 @@ public class EmailListServlet extends HttpServlet {
 				else {
 					message="";
 					url="/EmailList/thanks.jsp";
+				}
+				User findUser = Model.USER.find(Filters.eq("email", Email)).first();
+				if (findUser == null){
+					User.Insert();
+				}
+				else {
+					message="Email đã tồn tại";
+					url="/EmailList/EmailList.jsp";
 				}
 				request.setAttribute("user", User);
 				request.setAttribute("message", message);
