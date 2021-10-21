@@ -52,17 +52,19 @@ public class EmailListServlet extends HttpServlet {
 					url="/EmailList/EmailList.jsp";
 				}
 				else {
-					message="";
-					url="/EmailList/thanks.jsp";
+					
+					if (User.CheckUserAlready(Email)){
+						message="Email đã tồn tại trong hệ thống. Vui lòng sử dụng email khác";
+						url="/EmailList/EmailList.jsp";
+						
+					}
+					else {
+						message="Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!";
+						User.Insert();
+						url="/EmailList/thanks.jsp";
+					}
 				}
-				User findUser = Model.USER.find(Filters.eq("email", Email)).first();
-				if (findUser == null){
-					User.Insert();
-				}
-				else {
-					message="Email đã tồn tại";
-					url="/EmailList/EmailList.jsp";
-				}
+				
 				request.setAttribute("user", User);
 				request.setAttribute("message", message);
 			}
