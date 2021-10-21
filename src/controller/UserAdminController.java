@@ -33,7 +33,10 @@ public class UserAdminController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		
 		HttpSession session = request.getSession();
 
 		String url = "/UserAdmin/user_admin.jsp";

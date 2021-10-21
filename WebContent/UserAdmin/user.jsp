@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png"
 	href="<c:url value='/assets/img/favicon.ico'/>">
-<title>Download Lists</title>
+<title>Thông tin tài khoản</title>
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link
@@ -29,8 +29,8 @@
 	<div class="app">
 		<section>
 			<div class="content">
-				<h1>Update User</h1>
-				<p>NOTE: You can't update the email address.</p>
+				<h1>Cập nhật User</h1>
+				<p>Bạn không thể thay đổi địa chỉ email!</p>
 				<form action="userAdmin" method="post">
 					<input type="hidden" name="action" value="update_user">
 					<label>Email:</label>
