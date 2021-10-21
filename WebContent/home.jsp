@@ -79,15 +79,6 @@
 					</div>
 				</div>
 
-				<div class="col-12 col-sm-4 col-lg-2">
-					<div class="card assignment-item">
-						<div class="card-body">
-							<a href="${pageContext.request.contextPath}/Dacta"
-								class="card-title">Đặc tả đề tài</a>
-							<p class="card-text">Đặc tả về đề tài cuối kì của nhóm</p>
-						</div>
-					</div>
-				</div>
 
 				<div class="col-12 col-sm-4 col-lg-2">
 					<div class="card assignment-item">
@@ -104,9 +95,18 @@
 				<div class="col-12 col-sm-4 col-lg-2">
 					<div class="card assignment-item">
 						<div class="card-body">
-							<a href="#" class="card-title">Bài tập 5</a>
-							<p class="card-text">Sử dụng JSP, JavaScript, Jquery,
-								Bootstrap,... để thiết kế giao diện Website</p>
+							<a href="#" class="card-title">Cart</a>
+							<p class="card-text">Sử dụng Database để lưu trữ thông tin Product</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-12 col-sm-4 col-lg-2">
+					<div class="card assignment-item">
+						<div class="card-body">
+							<a href="${pageContext.request.contextPath}/userAdmin"
+								class="card-title">Quản lý user</a>
+							<p class="card-text">Sử dụng database để lưu trữ user và thực hiện thao thác sửa, xoá</p>
 						</div>
 					</div>
 				</div>

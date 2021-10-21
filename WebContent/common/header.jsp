@@ -30,8 +30,7 @@
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/Dacta">Đặc tả đề tài</a></li>
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/listdownload">Download</a></li>
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/listitems">Cart</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="${pageContext.request.contextPath}/userAdmin">User Admin (Quản lý user)</a></li>
                     </ul>
                   </li>
                 </ul>

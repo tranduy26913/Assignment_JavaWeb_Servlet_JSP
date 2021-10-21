@@ -30,7 +30,7 @@
 		<section>
 			<div class="content">
 
-				<h1>Danh sách User</h1>
+				<h1 class="text-center">Danh sách User</h1>
 				<table>
 					<tr>
 						<th>First Name</th>
@@ -49,7 +49,7 @@
 						</tr>
 					</c:forEach>
 				</table>
-				<form action="userAdmin" method="post">
+				<form action="userAdmin" method="post" class="row justify-content-center">
 					<input type="submit" value="Refresh">
 				</form>
 
