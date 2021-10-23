@@ -71,7 +71,7 @@
 				<div class="col-12 col-sm-4 col-lg-2">
 					<div class="card assignment-item">
 						<div class="card-body">
-							<a href="${pageContext.request.contextPath}/SurveyForm"
+							<a href="${pageContext.request.contextPath}/surveyform"
 								class="card-title">Survey</a>
 							<p class="card-text">Bài tập Survey</p>
 							<p class="card-text">Chapter: 6.2</p>
@@ -83,7 +83,7 @@
 				<div class="col-12 col-sm-4 col-lg-2">
 					<div class="card assignment-item">
 						<div class="card-body">
-							<a href="#" class="card-title">Download</a>
+							<a href="${pageContext.request.contextPath}/listdownload" class="card-title">Download</a>
 							<p class="card-text">
 								Bài tập Download: Áp dụng Cookie, Session <br> Chapter:
 								7.1, 7.2, 7.3
@@ -95,7 +95,7 @@
 				<div class="col-12 col-sm-4 col-lg-2">
 					<div class="card assignment-item">
 						<div class="card-body">
-							<a href="#" class="card-title">Cart</a>
+							<a href="${pageContext.request.contextPath}/listitems" class="card-title">Cart</a>
 							<p class="card-text">Sử dụng Database để lưu trữ thông tin Product</p>
 						</div>
 					</div>
