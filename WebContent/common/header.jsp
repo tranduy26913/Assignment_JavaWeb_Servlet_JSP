@@ -33,6 +33,12 @@
                       <li><a class="dropdown-item" href="${pageContext.request.contextPath}/userAdmin">User Admin (Quản lý user)</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/tranduy26913/web-group2">Source Code</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://tuyendung.herokuapp.com/">Đồ án cuối kì</a>
+                  </li>
                 </ul>
                 <div class="nav-animation start-home"></div>
                 <form class="d-flex search-top">
