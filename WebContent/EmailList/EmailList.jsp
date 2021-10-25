@@ -42,12 +42,12 @@
 				<p><i>${message}</i></p>
 			</div>
 				<input type="hidden" name="action" value="add"> <label>Email:</label>
-				<input type="email" name="email" value="${user.email}"><br> 
+				<input type="email" name="email" value="<c:out value='${user.email}'/> "><br> 
 				<label>First name:</label> 
-				<input type="text" name="firstName" value="${user.firstName}"><br>
+				<input type="text" name="firstName" value="<c:out value='${user.firstName}'/> "> <br>
 
 				<label>Last name</label> 
-				<input type="text" name="lastName" value="${user.lastName}"><br>
+				<input type="text" name="lastName" value="<c:out value='${user.lastName}'/>" > <br>
 				<div class="btn-submit">
 					<input type="submit" value="Join Now" id="submit"><br>
 				</div>

@@ -40,21 +40,19 @@
 						<tr>
 							<td>
 								<form action="cart" method="post">
-									<input type="hidden" name="productCode"
-										value="${item.product.productCode}"> <input type=text
-										name="quantity" value="${item.quantity}" id="quantity">
+									<input type="hidden" name="productCode" value="<c:out value='${item.product.productCode}'/>"> 
+									<input type=text name="quantity" value="<c:out value='${item.quantity}'/>" id="quantity">
 									<input type="submit" value="Update">
 								</form>
 							</td>
-							<td>${item.product.productName}</td>
-							<td>${item.product.priceCurrencyFormat}</td>
-							<td>${item.totalCurrencyFormat}</td>
+							<td><c:out value='${item.product.productName}'/></td>
+							<td><c:out value='${item.product.priceCurrencyFormat}'/></td>
+							<td><c:out value='${item.totalCurrencyFormat}'/></td>
 							<td>
 								<form action="cart" method="post">
-									<input type="hidden" name="productCode"
-										value="${item.product.productCode}"> <input
-										type="hidden" name="quantity" value="0"> <input
-										type="submit" value="Remove Item">
+									<input type="hidden" name="productCode" value="<c:out value='${item.product.productCode}'/>" >
+									<input type="hidden" name="quantity" value="0"> 
+									<input type="submit" value="Remove Item">
 								</form>
 							</td>
 						</tr>
@@ -67,13 +65,13 @@
 				</p>
 
 				<form action="" method="post">
-					<input type="hidden" name="action" value="shop"> <input
-						type="submit" value="Continue Shopping">
+					<input type="hidden" name="action" value="shop"> 
+					<input type="submit" value="Continue Shopping">
 				</form>
 
 				<form action="cart" method="post">
-					<input type="hidden" name="action" value="checkout"> <input
-						type="submit" value="Checkout">
+					<input type="hidden" name="action" value="checkout"> 
+					<input type="submit" value="Checkout">
 				</form>
 			</div>
 		</section>

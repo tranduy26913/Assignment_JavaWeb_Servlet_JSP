@@ -40,8 +40,8 @@
 					</tr>
 					<c:forEach var="c" items="${cookie}">
 						<tr>
-							<td>${c.value.name}</td>
-							<td>${c.value.value}</td>
+							<td><c:out value='${c.value.name}'/></td>
+							<td><c:out value='${c.value.value}'/></td>
 						</tr>
 					</c:forEach>
 				</table>

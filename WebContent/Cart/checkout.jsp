@@ -27,8 +27,8 @@
 		<h1>Checkout isn't finished yet</h1>
 		<p>Click on the browser's Back button to continue.</p>
 		<form action="cart" method="post">
-					<input type="hidden" name="action" value="shop"> <input
-						type="submit" value="Continue Shopping">
+					<input type="hidden" name="action" value="shop"> 
+					<input type="submit" value="Continue Shopping">
 		</form>
 		</div>
 		</section>
