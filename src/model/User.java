@@ -134,7 +134,9 @@ public class User extends Model implements Serializable {
 		USER.deleteOne(Filters.eq("email", email));
 	}
 	
-	
+	public static User getUserByEmail(String email) {
+		return USER.find(Filters.eq("email", email)).first();
+	}
 	public static boolean CheckUserAlready(String email) {
 		User findUser = Model.USER.find(Filters.eq("email", email)).first();
 		if(findUser!=null)

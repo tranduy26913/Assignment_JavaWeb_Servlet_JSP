@@ -27,7 +27,7 @@
 	<div class="app">
 		<section>
 			<div class="content">
-			<form class="survey" action="survey" method="post" style="background-color:#fff;border-radius:12px;border:1px solid #aaa;padding:20px;margin:20px 0px;">
+			<form class="survey" action="survey" method="post" style="max-width:600px;background-color:#fff;border-radius:12px;border:1px solid #aaa;padding:20px;margin:20px 0px;">
             <h1 style="text-align: center;margin-bottom:20px;">Survey</h1>
             <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
             

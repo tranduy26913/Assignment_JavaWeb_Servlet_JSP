@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png"
 	href="<c:url value='/assets/img/favicon.ico'/>">
-<title>Download Lists</title>
+<title>View Cookie</title>
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link
@@ -54,8 +54,8 @@
 					<a href="download?action=deleteCookies">Delete all persistent
 						cookies</a>
 				</p>
-				</div>
-			</section>
+			</div>
+		</section>
 	</div>
 
 

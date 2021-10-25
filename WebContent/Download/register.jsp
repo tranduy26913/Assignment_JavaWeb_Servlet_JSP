@@ -25,11 +25,12 @@
 <section>
 <div class="content">
 <h1 class="text-center">Download registration</h1>
-<p>To register for our downloads, enter your name and email
+<p style="max-width:400px">To register for our downloads, enter your name and email
    address below. Then, click on the Submit button.</p>
-
-<form action="download" method="post">
-    <input type="hidden" name="action" value="registerUser">        
+<div class="row justify-content-center">
+<form action="download" method="post" style="margin:10px auto;">
+    <input type="hidden" name="action" value="registerUser"> 
+    <p><i>${message}</i></p>       
     <label class="pad_top">Email:</label>
     <input type="email" name="email" value="<c:out value='${user.email}'/>"><br>
     <label class="pad_top">First Name:</label>
@@ -39,6 +40,8 @@
     <label>&nbsp;</label>
     <input type="submit" value="Register" class="margin:5px auto">
 </form>
+</div>
+
 </div>
 </section>
 </div>

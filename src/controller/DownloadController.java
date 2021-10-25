@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import util.*;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +23,7 @@ import model.Model;
 import model.Music;
 import model.Product;
 import model.User;
+
 
 /**
  * Servlet implementation class downloadController
@@ -91,18 +94,10 @@ String action = request.getParameter("action");
         session.setAttribute("product", product);
         User user = (User) session.getAttribute("user");
 
-        FindIterable<Music> cursor = Model.MUSIC.find(Filters.eq("productCode",productCode));
-		Iterator<Music> it = cursor.iterator();
-		ArrayList<Music> listSongs = new ArrayList<Music>();
-		
+        
+		ArrayList<Music> listSongs = Music.GetMusicByProductCode(productCode);
 		session.setAttribute("songs", listSongs);
-		if (it.hasNext()) {
-			while (it.hasNext()) {
-				listSongs.add(it.next());
-			}
-		}
-		
-        String url;
+        String url="/";
         // if User object doesn't exist, check email cookie
         if (user == null) {
             Cookie[] cookies = request.getCookies();
@@ -115,8 +110,7 @@ String action = request.getParameter("action");
             } 
             // if cookie exists, create User object and go to Downloads page
             else {
-                ServletContext sc = getServletContext();
-                user= Model.USER.find(Filters.eq("email",emailAddress)).first();
+                user= User.getUserByEmail(emailAddress);
                 session.setAttribute("user", user);
                 url = "/Download/download.jsp";
             }
@@ -137,12 +131,24 @@ String action = request.getParameter("action");
         String lastName = request.getParameter("lastName");
 
         // store the data in a User object
-        User user = new User();
-        user.setEmail(email);
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-
-        user.Insert();
+        String message="";
+        
+        if(email.trim().isEmpty() ||firstName.trim().isEmpty() ||lastName.trim().isEmpty()) {
+        	message="Vui lòng điền đầy đủ thông tin";
+        	request.setAttribute("message", message);
+        	return "/Download/register.jsp";
+        	
+        }
+        User user=User.getUserByEmail(email);
+        
+        if(user!=null)// nếu không tìm thấy tài khoảng thì tạo mới để đăng ký
+        {
+        	user = new User();
+        	user.setEmail(email);
+        	user.setFirstName(firstName);
+        	user.setLastName(lastName);
+        	user.Insert();
+        }
 
         // store the User object as a session attribute
         HttpSession session = request.getSession();
@@ -158,17 +164,10 @@ String action = request.getParameter("action");
         // create and return a URL for the appropriate Download page
         Product product = (Product) session.getAttribute("product");
         
-        FindIterable<Music> cursor = Model.MUSIC.find(Filters.eq("productCode",product.getProductCode()));
-		Iterator<Music> it = cursor.iterator();
-		ArrayList<Music> listSongs = new ArrayList<Music>();
+        
+		ArrayList<Music> listSongs = Music.GetMusicByProductCode(product.getProductCode());
 		
 		session.setAttribute("songs", listSongs);
-		if (it.hasNext()) {
-			while (it.hasNext()) {
-				listSongs.add(it.next());
-			}
-		}
-		
         String url = "/Download/download.jsp";
         return url;
    }

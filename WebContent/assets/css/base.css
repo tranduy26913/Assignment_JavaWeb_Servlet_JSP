@@ -10,11 +10,14 @@ td, label, input,span,i,p,th {
 	font-size:14px;
 }
 
+input[type='text'] ,input[type='submit']
+ {
+ 	max-width: 200px;
+ }
 label {
 	min-width: 90px;
 }
 
-input {
-	width: 200px;
+input {	
 	margin:5px 10px;
 }
