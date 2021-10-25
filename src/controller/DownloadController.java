@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 
 import model.Model;
@@ -141,7 +140,7 @@ String action = request.getParameter("action");
         }
         User user=User.getUserByEmail(email);
         
-        if(user!=null)// nếu không tìm thấy tài khoảng thì tạo mới để đăng ký
+        if(user==null)// nếu không tìm thấy tài khoảng thì tạo mới để đăng ký
         {
         	user = new User();
         	user.setEmail(email);
