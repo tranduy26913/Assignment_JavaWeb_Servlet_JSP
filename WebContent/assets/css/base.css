@@ -18,6 +18,18 @@ label {
 	min-width: 90px;
 }
 
+td,th {
+	padding:4px;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 input {	
 	margin:5px 10px;
 }
