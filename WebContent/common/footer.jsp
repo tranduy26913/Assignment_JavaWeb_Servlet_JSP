@@ -82,7 +82,10 @@
               <a href="${pageContext.request.contextPath}/EmailListForm" class="text-reset">Email List</a>
             </p>
             <p>
-              <a href="${pageContext.request.contextPath}/SurveyForm" class="text-reset">Survey</a>
+              <a href="${pageContext.request.contextPath}/surveyform" class="text-reset">Survey</a>
+            </p>
+            <p>
+              <a href="${pageContext.request.contextPath}/listitems" class="text-reset">Cart</a>
             </p>
             <p>
               <a href="${pageContext.request.contextPath}/Dacta" class="text-reset">Đặc tả đề tài</a>
@@ -91,7 +94,7 @@
               <a href="${pageContext.request.contextPath}/listdownload" class="text-reset">Download</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Bài tập 5</a>
+              <a href="${pageContext.request.contextPath}/userAdmin" class="text-reset">User Admin (Quản lý User)</a>
             </p>
           </div>
           <!-- Grid column -->
