@@ -48,7 +48,7 @@ public class EmailListServlet extends HttpServlet {
 				String Email=request.getParameter("email");
 				String FirstName=request.getParameter("firstName");
 				String LastName=request.getParameter("lastName");
-				User User=new User(FirstName,LastName,Email);
+				User user=new User(FirstName,LastName,Email);
 				String message="";
 				if(Email==null || Email.isEmpty() || FirstName==null ||FirstName.isEmpty()
 						||LastName==null ||LastName.isEmpty()){
@@ -64,12 +64,12 @@ public class EmailListServlet extends HttpServlet {
 					}
 					else {
 						message="Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!";
-						User.Insert();
+						user.Insert();
 						url="/EmailList/thanks.jsp";
 					}
 				}
 				
-				request.setAttribute("user", User);
+				request.setAttribute("user", user);
 				request.setAttribute("message", message);
 			}
 		

@@ -34,10 +34,12 @@
 <div class="app">
 	<section>
 		<div class="content">
+			<h1 class="text-center">Thanks</h1>
+			<p><i>${message}</i></p>
 			<label>Email:</label><span>${user.email}</span><br>
 			<label>First Name:</label><span>${user.firstName}</span><br>
 			<label>Last Name:</label><span>${user.lastName}</span><br>
-			<span>To enter another email, click on the back button in your browser or Return button shown below</span>
+			<span>Để đăng ký với email khác, hãy click vào nút bên dưới</span>
 			<form action="" method="post">
 				<input type="hidden" name="action" value="join"> 
 				<div class="btn-submit">
